@@ -12,6 +12,6 @@ def my_route():
 
 @app.route('/test_post', methods=['POST'])
 def test_post():
-    data = request.form
+    data = request.data
     print(data)
-    return 'All good'
+    return 'All good, thanks for making a POST'
