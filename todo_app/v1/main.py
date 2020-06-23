@@ -15,8 +15,6 @@ def add_todo():
         logging.info(f'Failed to parse request body {e}')
         abort(400)
 
-
-
     return jsonify({})
 
 @app.route('/todo', methods=['GET'])
@@ -24,10 +22,10 @@ def get_todos():
     '''Get all items from the list'''
     return jsonify({})
 
-@app.route('/todo/<:id>', method=['UPDATE'])
+@app.route('/todo/<int:id>', methods=['UPDATE'])
 def update_todos():
     return jsonify({})
 
-@app.route('/todo/<:id>', method=['DELETE'])
+@app.route('/todo/<int:id>', methods=['DELETE'])
 def delete_todos():
     return jsonify({})
