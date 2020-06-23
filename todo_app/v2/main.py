@@ -21,8 +21,8 @@ def add_todo():
     except Exception as e:
         logging.info(f'Failed to parse request body {e}')
         abort(400)
-    service.add_todo(description, status)
-    return jsonify({})
+    response = service.add_todo(description, status)
+    return jsonify(response)
 
 @app.route('/todo', methods=['GET'])
 def get_todos():

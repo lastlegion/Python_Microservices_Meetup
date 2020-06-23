@@ -46,7 +46,7 @@ class TodoRepository:
             c = connection.cursor()
             c.execute(query)
             connection.commit()
-            id_ = c.lastrowid()
+            id_ = c.lastrowid
         except Exception as e:
             logging.warning(f'Repository error: {e}')
         return {
